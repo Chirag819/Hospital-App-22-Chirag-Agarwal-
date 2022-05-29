@@ -14,7 +14,7 @@ Then install library in  requirements.txt by writing in command line\
 pip3 install -r requirements.txt\
 After that run app.py and click on the server in output to reach the website
 
-## App working\
+## App working
 When new user need to be added ,he/she has to get registered in corresponding database and his/her photo had to be stored in /static/image and name it as {Designation} {Person_ID}\
 Designation=PA for Patient, ST for staff, D for doctor.\
 Example- D 1001.\
