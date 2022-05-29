@@ -1,0 +1,11 @@
+{% extends 'Patient detail.html' %}
+
+{% block button %}
+<center>
+    <a class="btn btn-outline-primary position-absoluteme-5 my-2" href="/updatepatient/{{ data[0][0] }}" role="button">Update Records
+    </a>
+</center>
+<center>
+    <a class="btn btn-outline-primary position-absoluteme-5 my-2" href="/scanpatient" role="button">Get Next Patient Details</a>
+</center>
+{% endblock button %}

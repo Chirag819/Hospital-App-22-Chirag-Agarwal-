@@ -1,0 +1,57 @@
+<!-- template inheritance -->
+{% extends 'base2.html' %}
+
+<!-- Title box -->
+{% block title %} Staff Details {% endblock title %}
+
+<!-- main body box -->
+{% block body %}
+
+<h2 class="text-center mb-2">Staff Details</h2>
+
+<!-- Staff member profile image from system -->
+<div class="container">
+  <div class="container py-1">
+    <div class="text-center">
+      <img
+        src="{{ image }}"
+        alt="second photo"
+        class="mb-2 my-1 border border-info overflow-auto rounded-5"
+        width="13%"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- loop for showing details of staff member like name,age -->
+{% for i in range(7) %}
+
+<div class="text-center row justify-content-center py-2">
+  <div class="col-3">{{ field[i] }}</div>
+  <div class="col-3">{{ data[0][i] }}</div>
+</div>
+<center>
+  <hr style="border-top: dotted; width: 10%" />
+
+</center>
+
+{% endfor %}
+
+<!-- button for marking attendance -->
+<center class="my-2">
+  <a
+    class="btn btn-outline-primary"
+    href="/attendance/{{ index }}"
+    role="button"
+    >Mark Attendance</a
+  >
+</center>
+
+<h6>
+  <center>
+    To mark the attendance <br />
+    show yourself with only one security guard in camera
+  </center>
+</h6>
+
+{% endblock body %}

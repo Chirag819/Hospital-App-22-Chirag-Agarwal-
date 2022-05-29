@@ -1,0 +1,74 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+Patient Details
+{% endblock title %}
+
+{% block body %}
+
+<h2 class="text-center">Patient Details</h2>
+<div class="container-fluid " style="padding-left: 0px; padding-right: 0px">
+  <div class="row justify-content-evenly mx-1">
+    <div class="col-sm-11 col-lg-4 bg-danger rounded-2 my-2 px-1 py-1 h-100" style="--bs-danger-rgb: 240, 244, 248;">
+      <h2 class="text-center py-1 ">General Details</h2>
+      <hr>
+
+      <div class="text-center py-2 m-y2 " >
+
+        <img src="{{ image }}" alt="Profile photo" class="img-responsive border border-info overflow-auto rounded-5"
+          width="30%">
+      </div>
+
+      <!-- getting patient data -->
+      {% for i in range(7) %}
+      <div class="row py-2 border">
+
+        <div class="col">{{ field[i] }}</div>
+        <div class="col position-relative end-0 text-end"> {{ data[0][i] }}</div>
+
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="col-sm-11 col-lg-7 bg-danger rounded-2 my-2 px-1 py-1 pb-3" style="--bs-danger-rgb: 240, 244, 248;">
+
+      <h2 class="text-center py-1">Medical Details</h2>
+
+      <!-- Getting medical details -->
+      {% if patient_data|length == 0 %}
+      <div class="text-center py-5 my-5">
+        No Record Found
+
+
+
+
+        {% else %}
+        <hr>
+
+        {% for i in patient_data %}
+        <div class="row py-4 border">
+          <div class="col-sm-4 col-lg-4">
+            <div class="col text-center">
+              {{ i[3] }}
+            </div>
+            <div class="col text-center">
+              {{ i[2] }}
+            </div>
+          </div>
+
+          <div class="col-sm-7 col-lg-8 text-center">
+            {{ i[4] }}
+          </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  {% block button %}
+
+
+  {% endblock button %}
+
+  {% endblock body %}

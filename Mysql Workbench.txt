@@ -1,0 +1,87 @@
+CREATE DATABASE test;
+
+USE test;
+
+CREATE TABLE patient_medical_detail(
+	Person_ID int NOT NULL,
+    Doctor_ID INT NOT NULL,
+    DateOfCheckup Datetime not null default(CURRENT_TIMESTAMP()),
+    Doctor_name varchar(20) ,
+    remark varchar(400) not null
+);
+
+INSERT INTO patient_medical_detail
+VALUES( 10001002 , 1004, "2021-07-25 12:20:30", "Anushka Sharma", "Test show Ashtma. XYZabc given. Recommeded X Inhaler."),
+	(10001001 , 1002, "2021-09-25 11:04:12", "Imran Khan", "Common cold.Antibiotic 'ABCD XYZ' and parasitamol. come after 5days"),
+    (10001002 , 1002, "2021-10-25 10:00:09", "Imran Khan", "Chest pain. x-ray."),
+    (10001002 , 1002, "2021-10-26 13:07:09", "Imran Khan", "Chest pain-Ashtma."),
+    (10001003 , 1001, "2021-10-30 12:19:17", "Amitabh Bachchan", "Leg pain. Done some test"),
+    (10001003 , 1001, "2021-11-03 11:10:09", "Amitabh Bachchan", "All test okay. Pain due to age-vitamin D and calcium given."),
+    (10001002 , 1002, "2021-11-07 11:50:50", "Imran Khan", "eye and head pain. Vision 6/6. MRI"),
+    (10001002 , 1002, "2021-11-09 10:50:40", "Imran Khan", "MRI okay. Eye strain.Can't give ABX due to asthma medicine XYZabc"),
+    (10001004 , 1003, "2021-10-12 10:30:49", "Shahrukh Khan", "teeth decay. filling required.");
+    
+CREATE TABLE doctor(
+	Person_ID INT NOT NULL,
+    PRIMARY KEY(Person_ID),
+    Name VARCHAR(20),
+    Sex VARCHAR(6),
+    DateOfBirth Datetime not null,
+    Age INT DEFAULT(timestampdiff(YEAR,`DateOfBirth`,curdate())),
+    Phone VARCHAR(15),
+    Email VARCHAR(40)
+);
+
+INSERT INTO doctor(Person_ID,Name,Sex,DateOfBirth,Age,Phone,Email)
+VALUES( 1001 , 'Amitabh Bachchan' , "Male", "1942-10-11", DEFAULT,'+91 9900412345','bachchan_amit99@gmail.com'),
+	(1002 , 'Imran Khan', "Male", "1952-10-05", DEFAULT,'+91 9900412100','imran390@gmail.com'),
+    (1003 , 'Shah Rukh Khan', "Male",  "1965-11-02",DEFAULT,'+91 9900417777','khan2shahrukh@gmail.com'),
+    (1004 , 'Anushka Sharma' , "Female", "1988-05-01", DEFAULT, "+91 9900419990",'anusharma78@gmail.com');
+    
+CREATE TABLE new_user_data(
+    Name VARCHAR(20),
+    Phone VARCHAR(17),
+    Email VARCHAR(40),
+	Message VARCHAR(400)
+);
+
+INSERT INTO new_user_data
+VALUES( 'chirag' , '9090909090', "g23@gmail.com", "Test message"),
+	('Chandramani' ,'9086656576', "Chandu81@gmail.com", "Hospital is clean."),
+    ('Chirag','9837689898', "cagarwal@gmail.com", "The hospital staff is very friendly.");
+    
+CREATE TABLE staff(
+	Person_ID INT NOT NULL,
+    PRIMARY KEY(Person_ID),
+    Name VARCHAR(20),
+    Sex VARCHAR(6),
+    DateOfBirth Datetime not null,
+    Age INT DEFAULT(timestampdiff(YEAR,`DateOfBirth`,curdate())),
+    Phone VARCHAR(17),
+    Email VARCHAR(40)
+);
+
+INSERT INTO staff(Person_ID,Name,Sex,DateOfBirth,Age,Phone,Email)
+VALUES( 10001 , 'MS Dhoni' , "Male", "1981-07-07", DEFAULT,'+91 8989898989','dhoni21ms@gmail.com'),
+	(10002 , 'Virat Kohli', "Male", "1988-11-05", DEFAULT,'+91 9989889090','viratanukohli@gmail.com'),
+    (10003 , 'Rohit Sharma', "Male",  "1987-04-30",DEFAULT,'+91 9090888901','rohit09sharma@gmail.comm'),
+    (10004 , 'Sachin Tendulkar' , "Male", "1973-04-24", DEFAULT, "+91 9989881234",'tendulkar3sachin@gmail.com'),
+	(10006 , 'Chirag Goyal', "Male",  "2001-07-11",DEFAULT,'+91 6396209424','goyal898@gmail.com');
+    
+CREATE TABLE patient(
+	Person_ID INT NOT NULL,
+    PRIMARY KEY(Person_ID),
+    Name VARCHAR(20),
+    Sex VARCHAR(6),
+    DateOfBirth Datetime not null,
+    Age INT DEFAULT(timestampdiff(YEAR,`DateOfBirth`,curdate())),
+    Phone VARCHAR(17),
+    Email VARCHAR(40)
+);
+
+INSERT INTO patient(Person_ID,Name,Sex,DateOfBirth,Age,Phone,Email)
+VALUES( 10001001 , 'Barak Obama' , "Male", "1961-08-04", DEFAULT,'+91 613893829','Barakobama181@gmail.com'),
+	(10001002, 'Chirag Agarwal', "Male", "2001-02-26", DEFAULT,'+91 8193965190','Chiragagarwal819@gmail.com'),
+    (10001003 , 'Joe Biden', "Male",  "1942-11-20",DEFAULT,'+1(614)787342','bidenjoe11@gmail.com'),
+    (10001004 , 'Narendra Modi' , "Male", "1950-09-17", DEFAULT, "+91 8987890934",'modi21@gmail.com'),
+	(10001005 , 'Vladimir Putin', "Male",  "1952-10-07",DEFAULT,'+7(495)123–45–67','putin52vladimir@gmail.com');

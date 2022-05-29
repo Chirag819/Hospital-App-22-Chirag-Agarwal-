@@ -1,0 +1,34 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+Doctor Details
+{% endblock title %}
+
+{% block body %}
+  
+  <h2 class="text-center my-1">Doctor Details</h2>
+
+  <div class="container ">
+    <div class="container py-1">
+      <div class="text-center ">
+        <img src="{{ image }}" alt="second photo" class="border border-info overflow-auto rounded-5" width="13%" >
+      </div>
+    </div>
+  </div>
+  <!-- Doctor Details  -->
+  {% for i in range(7) %}  
+  <div class="text-center row justify-content-center py-2">
+    <div class="col-3">{{ field[i] }}</div>
+    <div class="col-3" > {{ data[0][i] }}</div>
+  </div>
+  <center>
+  <hr style="border-top: dotted; width:10% ">
+  </center>
+  {% endfor %}
+
+  <center>
+    <a class="btn btn-outline-primary position-absoluteme-5" href="/scanpatient" role="button">Get Patient Details</a>
+
+  </center>
+
+  {% endblock body %}

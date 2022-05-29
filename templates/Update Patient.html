@@ -1,0 +1,32 @@
+<!-- Template inheritance -->
+{% extends 'base2.html' %}
+
+{% block title %}
+    Update Patient Details
+{% endblock title %}
+
+{% block body %}
+
+<!-- form for doctor id and detail -->
+
+<form action="/updatepatient/{{ id }}" method="POST" class="mx-5 ms-4">
+  
+  <!-- Doctor Id field -->
+    <div class="mb-3">
+      <label for="Doctor_ID" class="form-label">Doctor ID</label>
+      <input type="text" class="form-control" name="Doctor_ID" id="Doctor_ID" aria-describedby="Doctor_ID">
+    </div>
+
+  <!-- Add new record field -->
+    <div class="mb-3">
+      <label for="Details" class="form-label">Add new medical record</label>
+      <textarea class="form-control" name="Details" id="Details" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+{% endblock %}
+
+  
