@@ -1,7 +1,7 @@
 # MicrosoftEngage-22-Chirag-Agarwal-
 Face Recognition - Website for Hospital and their members
 
-## Requirements/Step
+Requirements/Step
 Install MySQL installer community version
 Keep the passward as- zxcasdqwe and everything as default\
 Then in MySQL  workbench dashboard copy and paste text from 'Mysql workbench.txt' file that is in my Github repo. Then execute the command 
