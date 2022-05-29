@@ -1,25 +1,25 @@
 # MicrosoftEngage-22-Chirag-Agarwal-
 Face Recognition - Website for Hospital and their members
 
-##Requirements/Step\
+##Requirements/Step##
 Install MySQL installer community version
 Keep the passward as- zxcasdqwe and everything as default\
 Then in MySQL  workbench dashboard copy and paste text from 'Mysql workbench.txt' file that is in my Github repo. Then execute the command \
 
-##Other requirement\
+##Other requirement##\
 -Visual studio for C++ and C# with cmake library\
 -python 3.10\
--pip3\
+-pip3
 
 Then install library in  requirements.txt by writing in command line\
 pip3 install -r requirements.txt\
-After that run app.py and click on the server in output to reach the website\
+After that run app.py and click on the server in output to reach the website
 
-##App working\
+##App working##\
 When new user need to be added ,he/she has to get registered in corresponding database and his/her photo had to be stored in /static/image and name it as {Designation} {Person_ID}\
 Designation=PA for Patient, ST for staff, D for doctor.\
 Example- D 1001.\
-After that you are all setApp working\
+After that you are all setApp working
 
 What website does\
 The website take your face and if you are existing user take you to patient/staff/doctor page accordingly.\
