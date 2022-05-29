@@ -4,7 +4,7 @@ Face Recognition - Website for Hospital and their members
 ## Requirements/Step
 Install MySQL installer community version
 Keep the passward as- zxcasdqwe and everything other as default\
-Then in MySQL workbench dashboard copy and paste text from 'Mysql workbench.txt' file that is in my Github repo. Then execute the commands that are copied.
+Then in MySQL workbench dashboard copy and paste text from 'Mysql Workbench.txt' file that is in my Github repo. Then execute the commands that are copied.
 ### Other requirement
 -Visual studio for C++ and C# with cmake library\
 -python 3.10\
