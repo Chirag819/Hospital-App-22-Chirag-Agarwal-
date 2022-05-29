@@ -3,8 +3,8 @@ Face Recognition - Website for Hospital and their members
 
 ## Requirements/Step
 Install MySQL installer community version
-Keep the passward as- zxcasdqwe and everything as default\
-Then in MySQL  workbench dashboard copy and paste text from 'Mysql workbench.txt' file that is in my Github repo. Then execute the command 
+Keep the passward as- zxcasdqwe and everything other as default\
+Then in MySQL workbench dashboard copy and paste text from 'Mysql workbench.txt' file that is in my Github repo. Then execute the commands that are copied.
 ### Other requirement
 -Visual studio for C++ and C# with cmake library\
 -python 3.10\
@@ -12,7 +12,7 @@ Then in MySQL  workbench dashboard copy and paste text from 'Mysql workbench.txt
 
 Then install library in  requirements.txt by writing in command line\
 pip3 install -r requirements.txt\
-After that run app.py and click on the server in output to reach the website
+After that run app.py and click on the server in output to reach the website. (It shall be like http://127.0.0.1:5000 )
 
 ## App working
 When new user need to be added ,he/she has to get registered in corresponding database and his/her photo had to be stored in /static/image and name it as {Designation} {Person_ID}\
