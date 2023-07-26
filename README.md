@@ -27,7 +27,3 @@ be misplaced which may be important for doctor for further medication. And it ta
  previously understood by another doctor. The main feature of the website is that it scans the patient and tell doctor, the medical history saved in the database by every doctor he visited in the past written by the doctor himself. After analysis, the doctor update the patient record. He shall write in brief about analysis./
 For patient it take you to page that show patient detail. For staff it show them their detail and they can mark their attendance which is stored in CSV file for convenience.
 
-## Future Plans
--Make a system such When updating, doctor speak and details fills by what he speak\
--Make database online\
-**I thought of deploying website but can't do due to bugs. I didn't get how to get MySql database to cloud so i have to tell you to manually copy paste data. Sorry for that.**
